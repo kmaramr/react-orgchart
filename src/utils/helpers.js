@@ -8,7 +8,12 @@ export const getCount = data => {
     return '';
   }
 
-  return `Team (${children})`;
+  let childrenName = "Sub";
+  if (!data.childrenName) {
+    childrenName = data.childrenName;
+  }
+  
+  return `${childrenName} - ${children}`;
 };
 
 export const getCursorForNode = data =>
